@@ -43,9 +43,7 @@ research_manager = Agent(
     backstory='You are a seasoned research manager with expertise in health and wellness, overseeing a team of AI specialists.',
     tools=[file_tool, pdf_read_tool, docs_tool],
     allow_delegation=True,
-    verbose=True,
-    # max_iter=100,  # Set a higher iteration limit
-    # max_execution_time=300,  # Set a higher time limit (in seconds)
+    verbose=True
 )
 
 # Agent 2: Blood Report Analyst
@@ -56,9 +54,6 @@ blood_report_analyst = Agent(
     tools=[file_tool, pdf_read_tool, docs_tool],
     allow_delegation=False,
     verbose=True,
-    context={'C:\\Users\\pooja\\Wingify\\data\\blood_sample_report.txt': txt_path}
-    # max_iter=100,  # Set a higher iteration limit
-    # max_execution_time=300,  # Set a higher time limit (in seconds)
 )
 
 # Agent 3: Health Researcher
@@ -69,8 +64,6 @@ health_researcher = Agent(
     tools=[search_tool, web_rag_tool, docs_tool],
     allow_delegation=False,
     verbose=True,
-    # max_iter=100,  # Set a higher iteration limit
-    # max_execution_time=300,  # Set a higher time limit (in seconds)
 )
 
 # Agent 4: Health Recommendation Specialist
@@ -81,8 +74,6 @@ health_recommendation_specialist = Agent(
     tools=[file_tool, docs_tool],
     allow_delegation=False,
     verbose=True,
-    # max_iter=100,  # Set a higher iteration limit
-    # max_execution_time=300,  # Set a higher time limit (in seconds)
 )
 
 # Define tasks for each agent
@@ -114,8 +105,6 @@ crew = Crew(
     verbose=True,
     process=Process.sequential
 )
-# Print to check the path
-print(f"Text file path being passed to the task: {txt_path}")
 
 # Define input
 inputs = {

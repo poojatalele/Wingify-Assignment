@@ -16,7 +16,6 @@ def pdf_to_text(pdf_path, txt_path):
                     text_file.write("\n\n")
     # print("done")
 
-# Example usage
 pdf_path = r'C:\Users\pooja\Wingify\data\blood_sample_report.pdf'
-txt_path = r'C:\Users\pooja\Wingify\data\blood_sample_report.txt'
+txt_path = r'C:\Users\pooja\Wingify\data\blood_test_report.txt'
 pdf_to_text(pdf_path, txt_path)
